@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <title>Job Stock - Responsive Job Portal Bootstrap Template | ThemezHub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/frontend/")assets/plugins/css/plugins.css">
+
+    <!-- Custom style -->
+    <link href="@Url.Content("~/Content/frontend/")assets/css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" id="jssDefault" href="@Url.Content("~/Content/frontend/")assets/css/colors/green-style.css">
+
+</head>
+<body>
+
+    
+    <div class="Loader"></div>
+    <div class="wrapper">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed navbar-light white bootsnav">
+
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="@Url.Content("~/Content/frontend/")assets/img/logo.png" class="logo logo-scrolled" alt="">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp"></ul>
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="login.html"><i class="fa fa-pencil" aria-hidden="true"></i>SignIn</a></li>
+                        <li><a href="pricing.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
+                        <li class="left-br"><a href="javascript:void(0)" data-toggle="modal" data-target="#signup" class="signin">Sign In Now</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+        <div class="clearfix"></div>
+
+        <!-- Title Header Start -->
+        <section class="inner-header-title no-br advance-header-title" style="background-image:url(@Url.Content("~/Content/frontend/")assets/img/banner-10.jpg);">
+            <div class="container">
+                <h2><span>Work There.</span> Find the dream job</h2>
+
+
+                <p><span>704</span> new job in the last <span>7</span> days.</p>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- Title Header End -->
+
+
+
+
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>

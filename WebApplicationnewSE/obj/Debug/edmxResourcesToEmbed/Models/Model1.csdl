@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="JobPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobTyoe" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Locationn" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StartTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="EndTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Designation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RequiredSkills" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="JobPosts" EntityType="Self.JobPost" />
+    <EntitySet Name="ResumeCreations" EntityType="Database1Model.ResumeCreation" />
+    <EntitySet Name="ResumeCreation3" EntityType="Database1Model.ResumeCreation3" />
+    <EntitySet Name="aaas" EntityType="Database1Model.aaa" />
+    <EntitySet Name="Applications" EntityType="Database1Model.Application" />
+  </EntityContainer>
+  <EntityType Name="ResumeCreation">
+    <Key>
+      <PropertyRef Name="resumeId" />
+    </Key>
+    <Property Name="resumeId" Type="Int32" Nullable="false" />
+    <Property Name="resumeStatus" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ResumeCreation3">
+    <Key>
+      <PropertyRef Name="RC3Id" />
+    </Key>
+    <Property Name="RC3Id" Type="Int32" Nullable="false" />
+    <Property Name="ResumeStatus" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="aaa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="jobid" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

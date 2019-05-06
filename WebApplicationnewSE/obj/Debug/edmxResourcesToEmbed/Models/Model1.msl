@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="JobPosts">
+      <EntityTypeMapping TypeName="Database1Model.JobPost">
+        <MappingFragment StoreEntitySet="JobPost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="jobTyoe" ColumnName="jobTyoe" />
+          <ScalarProperty Name="Locationn" ColumnName="Locationn" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="RequiredSkills" ColumnName="RequiredSkills" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumeCreations">
+      <EntityTypeMapping TypeName="Database1Model.ResumeCreation">
+        <MappingFragment StoreEntitySet="ResumeCreation">
+          <ScalarProperty Name="resumeStatus" ColumnName="resumeStatus" />
+          <ScalarProperty Name="resumeId" ColumnName="resumeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumeCreation3">
+      <EntityTypeMapping TypeName="Database1Model.ResumeCreation3">
+        <MappingFragment StoreEntitySet="ResumeCreation3">
+          <ScalarProperty Name="ResumeStatus" ColumnName="ResumeStatus" />
+          <ScalarProperty Name="RC3Id" ColumnName="RC3Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aaas">
+      <EntityTypeMapping TypeName="Database1Model.aaa">
+        <MappingFragment StoreEntitySet="aaa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="Database1Model.Application">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
